@@ -11,7 +11,7 @@ class Partecipante extends Thread
 	}
 
 	public void run() {
-		Scrittore scrittore = new Scrittore("sedie.txt");
+		Scrittore scrittore = new Scrittore("Risultato.txt");
 
 		try {
 			sleep((int) (Math.random() * 1000));
