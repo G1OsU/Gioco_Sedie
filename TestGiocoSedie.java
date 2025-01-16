@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import java.util.Scanner;
 import java.util.logging.Logger;
 
 /**
@@ -11,7 +12,6 @@ import java.util.logging.Logger;
  * @author MC
  */
 public class TestGiocoSedie {
-    private final static int NUMSEDIE = 15;
     private static Logger logger = Logger.getLogger("GiocoSedie.TestGiocoSedie");
 
 
@@ -19,6 +19,10 @@ public class TestGiocoSedie {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Inserisci Giocatori: ");
+        int giocatori = scanner.nextInt();
+        int NUMSEDIE= giocatori-1;
         Posto sedie[] = new Posto[NUMSEDIE];
 
 

@@ -34,7 +34,7 @@ public class Scrittore implements Runnable{
                     new FileWriter(nomeFile,true));
             //2) scrivo nel buffer
             br.write(a);
-            br.write("\n\r");
+            br.write("\n");
             //3) svuoto il buffer e salvo nel file i dati
             br.flush();
         } catch (IOException ex) {
