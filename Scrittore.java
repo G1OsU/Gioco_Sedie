@@ -8,6 +8,12 @@ import java.util.logging.Logger;
  *
  * @author MC
  * @version 12/01/23
+ * Modificato da:
+ * @author Giosu
+ * @version 16/01/2024
+ * usando il metodo "scrivi" si passa un parametro "a" di tipo String e lo scrive in append nel file.
+ *
+ *
  */
 
 public class Scrittore implements Runnable{
