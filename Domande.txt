@@ -1,0 +1,28 @@
+Domande:
+3.1) Quali oggetti vengono istanziati? Quali di questi hanno una istanza esplicita?
+Vengono Istanziati cinque oggetti che sono: Scanner, Posto, Display, Partecipante, Scrittore. L'oggetto scanner è un'istanza esplicita che serve per l'input dell'utente. 
+L'array di Posto non è un'istanza esplicita e rappresenta le sedie nel gioco. Oggetto Display è un'istanza esplicita di output che gestisce lo stato delle sedie.
+Partecipante è un'istanza esplicita e rappresenta i giocatori. Scrittore è un'istanza esplicita  che serve pr scrivere i risultati su un file.
+3.2) Esistono classi anonime? Definisci il concetto di classe anonima.
+Non ci sono classi anonime, per classe anonima si intende una classe che viene definita e istanziata nello stesso momento.(interfacce)
+3.3) Quali sono le classi che lavorano in concorrenza? Quanti sono i thread in memoria?
+Le classi che lavorano in concorrenza sono Partecipanti e Display e il numero di thread dipende dai partecipanti(NUMSEDIE +1) e 1 thread per Display.
+3.4) Quali sono i metodi della classe Thread che vengono usati?
+Vengono usati i metodi start() e sleep(millis). Start() viene usato per avviare il thread per ogni partecipante e successivamente run(). Il metodo Sleep(millis) viene utilizzato per "addormentare" il thread.
+3.5) Quale è la classe Monitor? Perché e a cosa serve?
+La classe monitor in questo caso è Posto che utilizza synchronized per far in modo che solo un thread alla volta possa eseguire il codice che condivide una risorsa comune. In questo caso la sezione critica è la sedia.
+3.6) Quali eccezioni sono usate nell'applicazione? Di che tipo sono?
+Con il meotod Sleep() potrebbe verificarsi l'eccezione InterruptedException che è di tipo controllata attraverso il try-catch.
+3.7) Come si gestiscono le eccezioni? Individua le parti di codice interessate.
+Le eccezioni possono essere di tipo controllate e non controllate. Le eccezioni controllate vengono gestite attraverso try-catch, dove su try viene eeseguita quella parte di codice che 
+il compilatore ritiene che possa generare un'eccezione e se non vengono gestite il compilatore non compila il prgramma.Su catch viene catturata l'eccezione ed eseguito ad esempio 
+un messaggio di errore. Le eccezioni non controllate, sono eccezioni che non sono obbligatorie da gestire come ad esmepio a:b dove il programma verà compilato senza problemi ma nel 
+momento in cui si verificrà ad aesempio 15:0 verrà lanciata l'eccezione ArithmeticException.
+Esempio nel codice:
+try {
+      sleep((int) (Math.random() * 1000));
+....
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
+
